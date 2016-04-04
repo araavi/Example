@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20160404 08:22:06.992" generator="Robot 3.0 (Python 2.7.10 on darwin)">
+<suite source="/Users/Amar/PycharmProjects/untitled/sample.robot" id="s1" name="Sample">
+<test id="s1-t1" name="Test Case 1">
+<kw type="setup" name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://www.wellsfargo.com</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20160404 08:22:07.063" level="INFO">Opening browser 'chrome' to base url 'http://www.wellsfargo.com'</msg>
+<status status="PASS" endtime="20160404 08:22:10.730" starttime="20160404 08:22:07.063"></status>
+</kw>
+<kw name="Given I open Auto Finance Page">
+<kw name="Mouse Down On Link" library="Selenium2Library">
+<doc>Simulates a mouse down event on a link.</doc>
+<arguments>
+<arg>Loans and Credit</arg>
+</arguments>
+<status status="PASS" endtime="20160404 08:22:10.768" starttime="20160404 08:22:10.731"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>//*[@id="loans"]/div[1]/div[2]/ul/li[2]/a</arg>
+</arguments>
+<status status="PASS" endtime="20160404 08:22:11.241" starttime="20160404 08:22:10.768"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>Auto Loans</arg>
+</arguments>
+<msg timestamp="20160404 08:22:11.241" level="INFO">Clicking link 'Auto Loans'.</msg>
+<status status="PASS" endtime="20160404 08:22:12.985" starttime="20160404 08:22:11.241"></status>
+</kw>
+<kw name="Set Browser Implicit Wait" library="Selenium2Library">
+<doc>Sets current browser's implicit wait in seconds.</doc>
+<arguments>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20160404 08:22:12.987" starttime="20160404 08:22:12.985"></status>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals `title`.</doc>
+<arguments>
+<arg>Auto Loan &amp; Car Loan Financing for your Vehicle - Wells Fargo</arg>
+</arguments>
+<msg timestamp="20160404 08:22:12.991" level="INFO">Page title is 'Auto Loan &amp; Car Loan Financing for your Vehicle - Wells Fargo'.</msg>
+<status status="PASS" endtime="20160404 08:22:12.991" starttime="20160404 08:22:12.987"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>Use our auto financing payment calculator</arg>
+</arguments>
+<msg timestamp="20160404 08:22:12.991" level="INFO">Clicking link 'Use our auto financing payment calculator'.</msg>
+<status status="PASS" endtime="20160404 08:22:13.488" starttime="20160404 08:22:12.991"></status>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals `title`.</doc>
+<arguments>
+<arg>Auto Loan Calculator - Determine Car Loan Rates &amp; Payments - Wells Fargo</arg>
+</arguments>
+<msg timestamp="20160404 08:22:13.507" level="INFO">Page title is 'Auto Loan Calculator - Determine Car Loan Rates &amp; Payments - Wells Fargo'.</msg>
+<status status="PASS" endtime="20160404 08:22:13.507" starttime="20160404 08:22:13.488"></status>
+</kw>
+<status status="PASS" endtime="20160404 08:22:13.507" starttime="20160404 08:22:10.730"></status>
+</kw>
+<kw name="When I enter loan details as">
+<arguments>
+<arg>10019</arg>
+<arg>Used Auto Loan</arg>
+<arg>20000</arg>
+<arg>60</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>zipCode</arg>
+<arg>${Zip}</arg>
+</arguments>
+<msg timestamp="20160404 08:22:13.508" level="INFO">Typing text '10019' into text field 'zipCode'</msg>
+<status status="PASS" endtime="20160404 08:22:13.592" starttime="20160404 08:22:13.508"></status>
+</kw>
+<kw name="Select From List By Label" library="Selenium2Library">
+<doc>Selects `*labels` from list identified by `locator`</doc>
+<arguments>
+<arg>selProdType</arg>
+<arg>${LoanType}</arg>
+</arguments>
+<msg timestamp="20160404 08:22:13.593" level="INFO">Selecting label(s) 'Used Auto Loan' from list 'selProdType'.</msg>
+<status status="PASS" endtime="20160404 08:22:13.638" starttime="20160404 08:22:13.592"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>amount</arg>
+<arg>${LoanAmount}</arg>
+</arguments>
+<msg timestamp="20160404 08:22:13.639" level="INFO">Typing text '20000' into text field 'amount'</msg>
+<status status="PASS" endtime="20160404 08:22:13.699" starttime="20160404 08:22:13.639"></status>
+</kw>
+<kw name="Select From List By Label" library="Selenium2Library">
+<doc>Selects `*labels` from list identified by `locator`</doc>
+<arguments>
+<arg>selTerm</arg>
+<arg>${Term}</arg>
+</arguments>
+<msg timestamp="20160404 08:22:13.699" level="INFO">Selecting label(s) '60' from list 'selTerm'.</msg>
+<status status="PASS" endtime="20160404 08:22:13.740" starttime="20160404 08:22:13.699"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>Calculate</arg>
+</arguments>
+<msg timestamp="20160404 08:22:13.741" level="INFO">Clicking element 'Calculate'.</msg>
+<status status="PASS" endtime="20160404 08:22:14.624" starttime="20160404 08:22:13.740"></status>
+</kw>
+<status status="PASS" endtime="20160404 08:22:14.624" starttime="20160404 08:22:13.507"></status>
+</kw>
+<kw name="Then I should see monthly payment as">
+<arguments>
+<arg>$374.59</arg>
+</arguments>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies element identified by `locator` exactly contains text `expected`.</doc>
+<arguments>
+<arg>//*[@id='contentBody']/table/tbody/tr[2]/td[4]/strong</arg>
+<arg>${MonthlyPayment}</arg>
+</arguments>
+<msg timestamp="20160404 08:22:14.625" level="INFO">Verifying element '//*[@id='contentBody']/table/tbody/tr[2]/td[4]/strong' contains exactly text '$374.59'.</msg>
+<status status="PASS" endtime="20160404 08:22:14.672" starttime="20160404 08:22:14.624"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20160404 08:22:15.117" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20160404 08:22:15.117" starttime="20160404 08:22:14.672"></status>
+</kw>
+<status status="PASS" endtime="20160404 08:22:15.117" starttime="20160404 08:22:14.624"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20160404 08:22:15.180" starttime="20160404 08:22:15.118"></status>
+</kw>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="PASS" endtime="20160404 08:22:15.180" critical="yes" starttime="20160404 08:22:07.062"></status>
+</test>
+<test id="s1-t2" name="Test Case 2">
+<kw type="setup" name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://www.wellsfargo.com</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20160404 08:22:15.182" level="INFO">Opening browser 'chrome' to base url 'http://www.wellsfargo.com'</msg>
+<status status="PASS" endtime="20160404 08:22:19.625" starttime="20160404 08:22:15.181"></status>
+</kw>
+<kw name="Given I open Auto Finance Page">
+<kw name="Mouse Down On Link" library="Selenium2Library">
+<doc>Simulates a mouse down event on a link.</doc>
+<arguments>
+<arg>Loans and Credit</arg>
+</arguments>
+<status status="PASS" endtime="20160404 08:22:19.663" starttime="20160404 08:22:19.626"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>//*[@id="loans"]/div[1]/div[2]/ul/li[2]/a</arg>
+</arguments>
+<status status="PASS" endtime="20160404 08:22:20.129" starttime="20160404 08:22:19.664"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>Auto Loans</arg>
+</arguments>
+<msg timestamp="20160404 08:22:20.130" level="INFO">Clicking link 'Auto Loans'.</msg>
+<status status="PASS" endtime="20160404 08:22:22.180" starttime="20160404 08:22:20.130"></status>
+</kw>
+<kw name="Set Browser Implicit Wait" library="Selenium2Library">
+<doc>Sets current browser's implicit wait in seconds.</doc>
+<arguments>
+<arg>10</arg>
+</arguments>
+<status status="PASS" endtime="20160404 08:22:22.181" starttime="20160404 08:22:22.180"></status>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals `title`.</doc>
+<arguments>
+<arg>Auto Loan &amp; Car Loan Financing for your Vehicle - Wells Fargo</arg>
+</arguments>
+<msg timestamp="20160404 08:22:22.185" level="INFO">Page title is 'Auto Loan &amp; Car Loan Financing for your Vehicle - Wells Fargo'.</msg>
+<status status="PASS" endtime="20160404 08:22:22.185" starttime="20160404 08:22:22.181"></status>
+</kw>
+<kw name="Click Link" library="Selenium2Library">
+<doc>Clicks a link identified by locator.</doc>
+<arguments>
+<arg>Use our auto financing payment calculator</arg>
+</arguments>
+<msg timestamp="20160404 08:22:22.186" level="INFO">Clicking link 'Use our auto financing payment calculator'.</msg>
+<status status="PASS" endtime="20160404 08:22:22.779" starttime="20160404 08:22:22.185"></status>
+</kw>
+<kw name="Title Should Be" library="Selenium2Library">
+<doc>Verifies that current page title equals `title`.</doc>
+<arguments>
+<arg>Auto Loan Calculator - Determine Car Loan Rates &amp; Payments - Wells Fargo</arg>
+</arguments>
+<msg timestamp="20160404 08:22:22.801" level="INFO">Page title is 'Auto Loan Calculator - Determine Car Loan Rates &amp; Payments - Wells Fargo'.</msg>
+<status status="PASS" endtime="20160404 08:22:22.801" starttime="20160404 08:22:22.779"></status>
+</kw>
+<status status="PASS" endtime="20160404 08:22:22.802" starttime="20160404 08:22:19.625"></status>
+</kw>
+<kw name="When I enter loan details as">
+<arguments>
+<arg>10019</arg>
+<arg>Used Auto Loan</arg>
+<arg>15000</arg>
+<arg>60</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>zipCode</arg>
+<arg>${Zip}</arg>
+</arguments>
+<msg timestamp="20160404 08:22:22.803" level="INFO">Typing text '10019' into text field 'zipCode'</msg>
+<status status="PASS" endtime="20160404 08:22:22.878" starttime="20160404 08:22:22.802"></status>
+</kw>
+<kw name="Select From List By Label" library="Selenium2Library">
+<doc>Selects `*labels` from list identified by `locator`</doc>
+<arguments>
+<arg>selProdType</arg>
+<arg>${LoanType}</arg>
+</arguments>
+<msg timestamp="20160404 08:22:22.878" level="INFO">Selecting label(s) 'Used Auto Loan' from list 'selProdType'.</msg>
+<status status="PASS" endtime="20160404 08:22:22.922" starttime="20160404 08:22:22.878"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>amount</arg>
+<arg>${LoanAmount}</arg>
+</arguments>
+<msg timestamp="20160404 08:22:22.923" level="INFO">Typing text '15000' into text field 'amount'</msg>
+<status status="PASS" endtime="20160404 08:22:22.981" starttime="20160404 08:22:22.922"></status>
+</kw>
+<kw name="Select From List By Label" library="Selenium2Library">
+<doc>Selects `*labels` from list identified by `locator`</doc>
+<arguments>
+<arg>selTerm</arg>
+<arg>${Term}</arg>
+</arguments>
+<msg timestamp="20160404 08:22:22.982" level="INFO">Selecting label(s) '60' from list 'selTerm'.</msg>
+<status status="PASS" endtime="20160404 08:22:23.025" starttime="20160404 08:22:22.981"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>Calculate</arg>
+</arguments>
+<msg timestamp="20160404 08:22:23.025" level="INFO">Clicking element 'Calculate'.</msg>
+<status status="PASS" endtime="20160404 08:22:24.030" starttime="20160404 08:22:23.025"></status>
+</kw>
+<status status="PASS" endtime="20160404 08:22:24.031" starttime="20160404 08:22:22.802"></status>
+</kw>
+<kw name="Then I should see monthly payment as">
+<arguments>
+<arg>$281.42</arg>
+</arguments>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies element identified by `locator` exactly contains text `expected`.</doc>
+<arguments>
+<arg>//*[@id='contentBody']/table/tbody/tr[2]/td[4]/strong</arg>
+<arg>${MonthlyPayment}</arg>
+</arguments>
+<msg timestamp="20160404 08:22:24.032" level="INFO">Verifying element '//*[@id='contentBody']/table/tbody/tr[2]/td[4]/strong' contains exactly text '$281.42'.</msg>
+<status status="PASS" endtime="20160404 08:22:24.073" starttime="20160404 08:22:24.031"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20160404 08:22:24.467" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20160404 08:22:24.467" starttime="20160404 08:22:24.073"></status>
+</kw>
+<status status="PASS" endtime="20160404 08:22:24.467" starttime="20160404 08:22:24.031"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20160404 08:22:24.530" starttime="20160404 08:22:24.468"></status>
+</kw>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="PASS" endtime="20160404 08:22:24.530" critical="yes" starttime="20160404 08:22:15.181"></status>
+</test>
+<status status="PASS" endtime="20160404 08:22:24.531" starttime="20160404 08:22:06.994"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="2">Critical Tests</stat>
+<stat fail="0" pass="2">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="2">Smoke</stat>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="Sample" pass="2">Sample</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
